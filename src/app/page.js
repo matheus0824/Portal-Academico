@@ -1,69 +1,60 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import CardNoticia from "./components/CardNoticia";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.js</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+    <main>
+      <header>
+        <h1>Portal Acadêmico</h1>
+        <p>Informação, pesquisa e conhecimento.</p>
+      </header>
+
+      <nav>
+        <a href="/">Início</a>
+        <a href="/noticias">Notícias</a>
+        <a href="/cadastrar">Cadastrar notícia</a>
+      </nav>
+
+      <section>
+        <h2>Bem-vindo ao Portal Acadêmico!</h2>
+        <p>
+          Acompanhe as novidades, pesquisas e eventos
+          do mundo acadêmico.
+        </p>
+      </section>
+      <section>
+        <h2>Últimas notícias</h2>
+
+          <div className="lista-noticias">
+            <CardNoticia
+              titulo="Universidade desenvolve nova pesquisa"
+              categoria="Pesquisa"
+              data="14/10/2026"
+              resumo="Conheça os avanços de uma pesquisa desenvolvida no ambiente acadêmico."
+              imagem="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPibWU69JpA_LT4Yym2_Anr68XtDPku6bhvrBggMGKig&s=10"
             />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+            <CardNoticia
+              titulo="Semana acadêmica anuncia programação"
+              categoria="Eventos"
+              data="13/10/2026"
+              resumo="Confira as novidades e atividades previstas para a comunidade universitária."
+              imagem="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGtryb2_Ti-_gdxrjSCHTlyYG7hZYLqOhwGMNW9luurA&s"
+            />
+
+            <CardNoticia
+              titulo="Projeto de inovação ganha destaque"
+              categoria="Inovação"
+              data="12/10/2026"
+              resumo="Estudantes e pesquisadores apresentam novas ideias e soluções."
+              imagem="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPaPAyO1yXPd0DbEESmZhN-e6NxFdSpBJeX-4D6e6WmQ&s=10"
+            />
+          </div>
+      </section>
+
+
+      <footer>
+        <p>Portal Acadêmico - Projeto acadêmico</p>
+      </footer>
+    </main>
   );
 }
