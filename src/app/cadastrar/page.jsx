@@ -23,6 +23,7 @@ export default function CadastrarNoticia() {
       categoria: dados.get("categoria"),
       conteudo: dados.get("conteudo"),
       data: dados.get("data"),
+      imagem: dados.get("imagem"),
     };
 
     try {
@@ -133,7 +134,13 @@ export default function CadastrarNoticia() {
             {mensagem}
           </p>
         )}
+
+        
       </form>
+            
+        <a href="/" className="botao-voltar">
+        Voltar à página inicial
+        </a>
     </main>
   );
 }

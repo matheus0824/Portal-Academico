@@ -1,0 +1,323 @@
+  
+  [
+  {
+    "id": 1,
+    "titulo": "Universidade amplia estudos sobre inteligência artificial",
+    "categoria": "Pesquisa",
+    "conteudo": "Pesquisadores investigam novas aplicações de inteligência artificial na educação e na ciência.",
+    "data": "2026-10-01",
+    "imagem": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 2,
+    "titulo": "Grupo acadêmico desenvolve método para analisar qualidade da água",
+    "categoria": "Pesquisa",
+    "conteudo": "A equipe combina análises laboratoriais e coleta de dados para apoiar o monitoramento ambiental.",
+    "data": "2026-10-02",
+    "imagem": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 3,
+    "titulo": "Estudo avalia os impactos das mudanças climáticas nas cidades",
+    "categoria": "Pesquisa",
+    "conteudo": "O projeto reúne dados climáticos e urbanos para compreender riscos e apoiar o planejamento público.",
+    "data": "2026-10-03",
+    "imagem": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 4,
+    "titulo": "Pesquisa investiga novas formas de combater doenças",
+    "categoria": "Pesquisa",
+    "conteudo": "Pesquisadores estudam estratégias e tecnologias que podem contribuir para diagnósticos mais precisos.",
+    "data": "2026-09-04",
+    "imagem": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80"
+  
+  },
+  {
+    "id": 5,
+    "titulo": "Laboratório universitário apresenta novos resultados",
+    "categoria": "Pesquisa",
+    "conteudo": "Os resultados foram discutidos em seminário com estudantes, docentes e parceiros científicos.",
+    "data": "2026-09-05",
+    "imagem": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 6,
+    "titulo": "Estudo analisa hábitos de leitura entre universitários",
+    "categoria": "Pesquisa",
+    "conteudo": "A pesquisa busca compreender como estudantes acessam conteúdos acadêmicos e literários.",
+    "data": "2026-09-06",
+    "imagem": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 7,
+    "titulo": "Pesquisadores testam materiais sustentáveis",
+    "categoria": "Pesquisa",
+    "conteudo": "O projeto avalia alternativas com menor impacto ambiental para aplicações do dia a dia.",
+    "data": "2026-08-07",
+    "imagem": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 8,
+    "titulo": "Universidade investiga biodiversidade regional",
+    "categoria": "Pesquisa",
+    "conteudo": "A iniciativa reúne observações de campo para registrar espécies e apoiar ações de conservação.",
+    "data": "2026-08-08",
+    "imagem": "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 9,
+    "titulo": "Novo estudo aborda segurança digital",
+    "categoria": "Pesquisa",
+    "conteudo": "A equipe avalia práticas de proteção de dados e conscientização em ambientes conectados.",
+    "data": "2026-08-09",
+    "imagem": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 10,
+    "titulo": "Pesquisa sobre aprendizagem apresenta resultados iniciais",
+    "categoria": "Pesquisa",
+    "conteudo": "Os dados ajudam a identificar estratégias de ensino que favorecem a participação dos estudantes.",
+    "data": "2026-07-10",
+    "imagem": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 11,
+    "titulo": "Universidade divulga programação da semana acadêmica",
+    "categoria": "Eventos",
+    "conteudo": "A agenda inclui palestras, oficinas, apresentações de trabalhos e atividades de integração.",
+    "data": "2026-10-01",
+    "imagem": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 12,
+    "titulo": "Congresso estudantil abre inscrições",
+    "categoria": "Eventos",
+    "conteudo": "Estudantes e pesquisadores poderão compartilhar projetos e conhecer novas áreas de estudo.",
+    "data": "2026-10-02",
+    "imagem": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 13,
+    "titulo": "Palestra debate o futuro das profissões",
+    "categoria": "Eventos",
+    "conteudo": "Convidados discutem transformações no mercado de trabalho e competências para os próximos anos.",
+    "data": "2026-10-03",
+    "imagem": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 14,
+    "titulo": "Feira de cursos aproxima comunidade e universidade",
+    "categoria": "Eventos",
+    "conteudo": "O evento apresenta cursos, projetos e oportunidades de formação para visitantes.",
+    "data": "2026-09-04",
+    "imagem": "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 15,
+    "titulo": "Mostra científica recebe trabalhos de estudantes",
+    "categoria": "Eventos",
+    "conteudo": "A programação valoriza a produção acadêmica e incentiva a troca de experiências.",
+    "data": "2026-09-05",
+    "imagem": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 16,
+    "titulo": "Oficina ensina técnicas de apresentação acadêmica",
+    "categoria": "Eventos",
+    "conteudo": "Participantes praticam comunicação, organização de ideias e apresentação de resultados.",
+    "data": "2026-09-06",
+    "imagem": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 17,
+    "titulo": "Mesa-redonda discute inclusão no ensino superior",
+    "categoria": "Eventos",
+    "conteudo": "Especialistas e estudantes compartilham experiências e propostas para ampliar a acessibilidade.",
+    "data": "2026-08-07",
+    "imagem": "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 18,
+    "titulo": "Universidade promove encontro de iniciação científica",
+    "categoria": "Eventos",
+    "conteudo": "O encontro destaca projetos em andamento e incentiva novos estudantes a participar da pesquisa.",
+    "data": "2026-08-08",
+    "imagem": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 19,
+    "titulo": "Seminário reúne especialistas em sustentabilidade",
+    "categoria": "Eventos",
+    "conteudo": "As discussões abordam soluções ambientais e iniciativas que podem ser aplicadas nos campi.",
+    "data": "2026-08-09",
+    "imagem": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 20,
+    "titulo": "Evento de tecnologia apresenta projetos inovadores",
+    "categoria": "Eventos",
+    "conteudo": "Equipes demonstram protótipos e conversam sobre desafios de transformar ideias em soluções.",
+    "data": "2026-07-10",
+    "imagem": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 21,
+    "titulo": "Estudantes criam aplicativo para organizar estudos",
+    "categoria": "Inovação",
+    "conteudo": "A proposta reúne calendário, tarefas e lembretes em uma ferramenta voltada à rotina acadêmica.",
+    "data": "2026-10-01",
+    "imagem": "https://images.unsplash.com/photo-1512940778944-7d5d2f4d8c3a?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 22,
+    "titulo": "Projeto transforma resíduos em novos materiais",
+    "categoria": "Inovação",
+    "conteudo": "A iniciativa testa processos de reaproveitamento para reduzir o descarte e estimular a economia circular.",
+    "data": "2026-10-02",
+    "imagem": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 23,
+    "titulo": "Equipe desenvolve solução para economizar energia",
+    "categoria": "Inovação",
+    "conteudo": "Sensores e análise de dados ajudam a identificar oportunidades de reduzir o consumo energético.",
+    "data": "2026-10-03",
+    "imagem": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 24,
+    "titulo": "Laboratório apresenta protótipo de robótica",
+    "categoria": "Inovação",
+    "conteudo": "O protótipo foi criado para explorar automação e aproximar estudantes de desafios tecnológicos.",
+    "data": "2026-09-04",
+    "imagem": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 25,
+    "titulo": "Startup universitária propõe ferramenta de acessibilidade",
+    "categoria": "Inovação",
+    "conteudo": "A solução busca tornar conteúdos digitais mais fáceis de acessar para diferentes públicos.",
+    "data": "2026-09-05",
+    "imagem": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 26,
+    "titulo": "Projeto usa sensores para monitorar hortas",
+    "categoria": "Inovação",
+    "conteudo": "A tecnologia acompanha condições do solo e auxilia no uso eficiente da água.",
+    "data": "2026-09-06",
+    "imagem": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 27,
+    "titulo": "Universidade lança desafio de empreendedorismo",
+    "categoria": "Inovação",
+    "conteudo": "As equipes apresentam ideias e recebem orientação para validar propostas de negócio.",
+    "data": "2026-08-07",
+    "imagem": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 28,
+    "titulo": "Sistema inteligente ajuda a mapear mobilidade no campus",
+    "categoria": "Inovação",
+    "conteudo": "A iniciativa analisa informações de circulação para apoiar melhorias nos espaços universitários.",
+    "data": "2026-08-08",
+    "imagem": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 29,
+    "titulo": "Alunos desenvolvem plataforma de troca de livros",
+    "categoria": "Inovação",
+    "conteudo": "A plataforma incentiva o compartilhamento de materiais didáticos e o consumo consciente.",
+    "data": "2026-08-09",
+    "imagem": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1200&q=80"
+  },
+  {"id": 30,
+    "titulo": "Projeto testa tecnologia para agricultura urbana",
+    "categoria": "Inovação",
+    "conteudo": "A equipe estuda formas de combinar monitoramento digital e cultivo em pequenos espaços.",
+    "data": "2026-07-10",
+    "imagem": "https://images.unsplash.com/photo-1499529112087-3cb3b73?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 31,
+    "titulo": "Docentes testam novas metodologias em sala de aula",
+    "categoria": "Ensino",
+    "conteudo": "As atividades incentivam a participação dos alunos e a aprendizagem baseada em problemas.",
+    "data": "2026-10-01",
+    "imagem": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 32,
+    "titulo": "Universidade oferece oficina de escrita acadêmica",
+    "categoria": "Ensino",
+    "conteudo": "A oficina aborda estrutura de textos, citações, revisão e comunicação de resultados.",
+    "data": "2026-10-02",
+    "imagem": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 33,
+    "titulo": "Biblioteca amplia recursos digitais para estudantes",
+    "categoria": "Ensino",
+    "conteudo": "Novos materiais e orientações ajudam a comunidade a encontrar fontes confiáveis para estudar.",
+    "data": "2026-10-03",
+    "imagem": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 34,
+    "titulo": "Projeto de monitoria apoia alunos ingressantes",
+    "categoria": "Ensino",
+    "conteudo": "A iniciativa promove encontros para esclarecer dúvidas e facilitar a adaptação à universidade.",
+    "data": "2026-09-04",
+    "imagem": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 35,
+    "titulo": "Curso promove atividades práticas de laboratório",
+    "categoria": "Ensino",
+    "conteudo": "Os estudantes aplicam conceitos teóricos em experimentos acompanhados por docentes.",
+    "data": "2026-09-05",
+    "imagem": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 36,
+    "titulo": "Professores compartilham recursos para ensino híbrido",
+    "categoria": "Ensino",
+    "conteudo": "A troca de experiências explora ferramentas digitais e estratégias para diferentes formatos de aula.",
+    "data": "2026-09-06",
+    "imagem": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 37,
+    "titulo": "Programa de leitura incentiva debate entre estudantes",
+    "categoria": "Ensino",
+    "conteudo": "Os encontros combinam leitura orientada, conversa e produção de resenhas.",
+    "data": "2026-08-07",
+    "imagem": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 38,
+    "titulo": "Universidade promove tutoria em matemática",
+    "categoria": "Ensino",
+    "conteudo": "A ação oferece apoio para revisar conteúdos e desenvolver autonomia nos estudos.",
+    "data": "2026-08-08",
+    "imagem": "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 39,
+    "titulo": "Projeto interdisciplinar conecta ciência e sociedade",
+    "categoria": "Ensino",
+    "conteudo": "Turmas de diferentes áreas trabalham juntas em atividades ligadas a desafios reais.",
+    "data": "2026-08-09",
+    "imagem": "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 40,
+    "titulo": "Curso de extensão oferece introdução à programação",
+    "categoria": "Ensino",
+    "conteudo": "A formação apresenta conceitos básicos e exercícios para quem deseja iniciar na área.",
+    "data": "2026-07-10",
+    "imagem": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+  }
+]

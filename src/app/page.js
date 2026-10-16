@@ -1,59 +1,247 @@
-import CardNoticia from "./components/CardNoticia";
+
+"use client";
+
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [noticias, setNoticias] = useState([]);
+  const [carregando, setCarregando] = useState(true);
+
+  useEffect(() => {
+    async function buscarNoticias() {
+      try {
+        const resposta = await fetch(
+          "http://localhost:3001/noticias"
+        );
+
+        if (!resposta.ok) {
+          throw new Error("Erro ao buscar notícias");
+        }
+
+        const dados = await resposta.json();
+        setNoticias(dados);
+      } catch (erro) {
+        console.error("Erro ao carregar notícias:", erro);
+      } finally {
+        setCarregando(false);
+      }
+    }
+
+    buscarNoticias();
+  }, []);
+
+  const ordenarPorData = (lista) =>
+    [...lista].sort((a, b) =>
+      b.data.localeCompare(a.data)
+    );
+
+  const recentes = ordenarPorData(noticias);
+  const destaque = recentes[0];
+  const outrasNoticias = recentes.slice(1, 5);
+
+  const categorias = [
+    "Pesquisa",
+    "Eventos",
+    "Inovação",
+    "Ensino",
+  ];
+
+  function formatarData(data) {
+    if (!data) return "";
+
+    if (data.includes("-")) {
+      return data.split("-").reverse().join("/");
+    }
+
+    return data;
+  }
+
   return (
-    <main>
-      <header>
+    <main className="pagina-inicial">
+      <header className="cabecalho-jornal">
+        <p className="marca-superior">
+          INFORMAÇÃO, PESQUISA E CONHECIMENTO
+        </p>
+
         <h1>Portal Acadêmico</h1>
-        <p>Informação, pesquisa e conhecimento.</p>
+
+        <p>
+          As novidades que movimentam o mundo universitário.
+        </p>
       </header>
 
-      <nav>
+      <nav className="menu-jornal">
         <a href="/">Início</a>
-        <a href="/noticias">Notícias</a>
+        <a href="/noticias">Todas as notícias</a>
+        {categorias.map((categoria) => (
+          <a
+            href={`/noticias?categoria=${encodeURIComponent(categoria)}`}
+            key={categoria}
+          >
+            {categoria}
+          </a>
+        ))}
         <a href="/cadastrar">Cadastrar notícia</a>
       </nav>
 
-      <section>
-        <h2>Bem-vindo ao Portal Acadêmico!</h2>
-        <p>
-          Acompanhe as novidades, pesquisas e eventos
-          do mundo acadêmico.
-        </p>
-      </section>
-      <section>
-        <h2>Últimas notícias</h2>
+      <div className="conteudo-jornal">
+        <div className="titulo-secao">
+          <h2>Em destaque</h2>
+          <span>PORTAL ACADÊMICO</span>
+        </div>
 
-          <div className="lista-noticias">
-            <CardNoticia
-              titulo="Universidade desenvolve nova pesquisa"
-              categoria="Pesquisa"
-              data="14/10/2026"
-              resumo="Conheça os avanços de uma pesquisa desenvolvida no ambiente acadêmico."
-              imagem="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPibWU69JpA_LT4Yym2_Anr68XtDPku6bhvrBggMGKig&s=10"
-            />
+        {carregando && (
+          <p>Carregando as principais notícias...</p>
+        )}
 
-            <CardNoticia
-              titulo="Semana acadêmica anuncia programação"
-              categoria="Eventos"
-              data="13/10/2026"
-              resumo="Confira as novidades e atividades previstas para a comunidade universitária."
-              imagem="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGtryb2_Ti-_gdxrjSCHTlyYG7hZYLqOhwGMNW9luurA&s"
-            />
+        {!carregando && !destaque && (
+          <p>
+            Nenhuma notícia disponível no momento.
+          </p>
+        )}
 
-            <CardNoticia
-              titulo="Projeto de inovação ganha destaque"
-              categoria="Inovação"
-              data="12/10/2026"
-              resumo="Estudantes e pesquisadores apresentam novas ideias e soluções."
-              imagem="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPaPAyO1yXPd0DbEESmZhN-e6NxFdSpBJeX-4D6e6WmQ&s=10"
-            />
-          </div>
-      </section>
+        {destaque && (
+          <section className="area-destaques">
+            <article className="noticia-principal">
+              {destaque.imagem && (
+                <img
+                  src={destaque.imagem}
+                  alt={destaque.titulo}
+                />
+              )}
 
+              <div className="texto-destaque">
+                <span className="editoria">
+                  {destaque.categoria}
+                </span>
 
-      <footer>
-        <p>Portal Acadêmico - Projeto acadêmico</p>
+                <h2>{destaque.titulo}</h2>
+
+                <p>{destaque.conteudo}</p>
+
+                <small>
+                  Publicado em: {formatarData(destaque.data)}
+                </small>
+              </div>
+            </article>
+
+            <div className="manchetes-secundarias">
+              {outrasNoticias.map((noticia) => (
+                <article
+                  className="manchete"
+                  key={noticia.id}
+                >
+                  {noticia.imagem && (
+                    <img
+                      src={noticia.imagem}
+                      alt={noticia.titulo}
+                    />
+                  )}
+
+                  <div>
+                    <span className="editoria">
+                      {noticia.categoria}
+                    </span>
+
+                    <h3>{noticia.titulo}</h3>
+
+                    <small>
+                      {formatarData(noticia.data)}
+                    </small>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <div className="titulo-secao">
+          <h2>Últimas notícias</h2>
+          <a href="/noticias">Ver todas →</a>
+        </div>
+
+        <section className="grade-jornal">
+          {recentes.slice(0, 8).map((noticia) => (
+            <article className="noticia-resumo" key={noticia.id}>
+              {noticia.imagem && (
+                <img
+                  src={noticia.imagem}
+                  alt={noticia.titulo}
+                  loading="lazy"
+                />
+              )}
+
+              <span className="editoria">
+                {noticia.categoria}
+              </span>
+
+              <h3>{noticia.titulo}</h3>
+
+              <p>{noticia.conteudo}</p>
+
+              <small>
+                {formatarData(noticia.data)}
+              </small>
+            </article>
+          ))}
+        </section>
+
+        {categorias.map((categoria) => {
+          const lista = recentes
+            .filter((noticia) => noticia.categoria === categoria)
+            .slice(0, 3);
+
+          if (lista.length === 0) return null;
+
+          return (
+            <section
+              className="secao-editoria"
+              key={categoria}
+            >
+              <div className="titulo-secao">
+                <h2>{categoria}</h2>
+                <a
+                  href={`/noticias?categoria=${encodeURIComponent(categoria)}`}
+                >
+                  Mais notícias →
+                </a>
+              </div>
+
+              <div className="grade-jornal">
+                {lista.map((noticia) => (
+                  <article
+                    className="noticia-resumo"
+                    key={noticia.id}
+                  >
+                    {noticia.imagem && (
+                      <img
+                        src={noticia.imagem}
+                        alt={noticia.titulo}
+                        loading="lazy"
+                      />
+                    )}
+
+                    <h3>{noticia.titulo}</h3>
+
+                    <p>{noticia.conteudo}</p>
+
+                    <small>
+                      {formatarData(noticia.data)}
+                    </small>
+                  </article>
+                ))}
+              </div>
+            </section>
+          );
+        })}
+      </div>
+
+      <footer className="rodape-jornal">
+        <h2>Portal Acadêmico</h2>
+        <p>Informação, pesquisa e conhecimento.</p>
+        <a href="/noticias">Todas as notícias</a>
+        {" · "}
+        <a href="/cadastrar">Cadastrar notícia</a>
       </footer>
     </main>
   );
