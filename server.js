@@ -1,8 +1,6 @@
 
 const express = require("express");
 const cors = require("cors");
-const fs = require("fs");
-const path = require("path");
 
 const app = express();
 const PORT = 3001;
@@ -10,34 +8,16 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-const arquivoNoticias = path.join(__dirname, "noticias.json");
-
-// Carrega as notícias salvas no arquivo JSON.
-function carregarNoticias() {
-  try {
-    const conteudo = fs.readFileSync(arquivoNoticias, "utf8");
-    return JSON.parse(conteudo);
-  } catch (erro) {
-    console.error("Erro ao carregar noticias.json:", erro.message);
-    return [];
-  }
-}
-
-let noticias = carregarNoticias();
+// Carrega as notícias iniciais para a memória da API.
+// O arquivo JSON não será alterado pelas operações do site.
+let noticias = require("./noticias.json").map((noticia) => ({
+  ...noticia,
+}));
 
 let proximoId =
   noticias.reduce((maiorId, noticia) => {
     return Math.max(maiorId, noticia.id);
   }, 0) + 1;
-
-// Salva a lista atualizada no arquivo JSON.
-function salvarNoticias() {
-  fs.writeFileSync(
-    arquivoNoticias,
-    JSON.stringify(noticias, null, 2),
-    "utf8"
-  );
-}
 
 // Listar notícias
 app.get("/noticias", (req, res) => {
@@ -48,7 +28,12 @@ app.get("/noticias", (req, res) => {
 app.post("/noticias", (req, res) => {
   const { titulo, categoria, conteudo, data, imagem } = req.body;
 
-  if (!titulo || !categoria || !conteudo || !data) {
+  if (
+    !titulo?.trim() ||
+    !categoria?.trim() ||
+    !conteudo?.trim() ||
+    !data
+  ) {
     return res.status(400).json({
       mensagem: "Preencha todos os campos obrigatórios.",
     });
@@ -56,30 +41,62 @@ app.post("/noticias", (req, res) => {
 
   const noticia = {
     id: proximoId++,
-    titulo,
-    categoria,
-    conteudo,
+    titulo: titulo.trim(),
+    categoria: categoria.trim(),
+    conteudo: conteudo.trim(),
     data,
-    imagem: imagem || "",
+    imagem: imagem?.trim() || "",
   };
 
   noticias.push(noticia);
 
-  try {
-    salvarNoticias();
+  return res.status(201).json({
+    mensagem: "Notícia cadastrada com sucesso!",
+    noticia,
+  });
+});
 
-    res.status(201).json({
-      mensagem: "Notícia cadastrada com sucesso!",
-      noticia,
-    });
-  } catch (erro) {
-    noticias.pop();
-    proximoId--;
+// Editar notícia
+app.put("/noticias/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const { titulo, categoria, conteudo, data, imagem } = req.body;
 
-    res.status(500).json({
-      mensagem: "Erro ao salvar a notícia no arquivo JSON.",
+  if (
+    !titulo?.trim() ||
+    !categoria?.trim() ||
+    !conteudo?.trim() ||
+    !data
+  ) {
+    return res.status(400).json({
+      mensagem: "Preencha todos os campos obrigatórios.",
     });
   }
+
+  const indice = noticias.findIndex(
+    (noticia) => noticia.id === id
+  );
+
+  if (indice === -1) {
+    return res.status(404).json({
+      mensagem: "Notícia não encontrada.",
+    });
+  }
+
+  const noticiaAtualizada = {
+    ...noticias[indice],
+    titulo: titulo.trim(),
+    categoria: categoria.trim(),
+    conteudo: conteudo.trim(),
+    data,
+    imagem: imagem?.trim() || "",
+  };
+
+  noticias[indice] = noticiaAtualizada;
+
+  return res.json({
+    mensagem: "Notícia atualizada com sucesso!",
+    noticia: noticiaAtualizada,
+  });
 });
 
 // Excluir notícia
@@ -98,23 +115,13 @@ app.delete("/noticias/:id", (req, res) => {
 
   const [noticiaExcluida] = noticias.splice(indice, 1);
 
-  try {
-    salvarNoticias();
-
-    res.json({
-      mensagem: "Notícia excluída com sucesso!",
-      noticia: noticiaExcluida,
-    });
-  } catch (erro) {
-    noticias.splice(indice, 0, noticiaExcluida);
-
-    res.status(500).json({
-      mensagem: "Erro ao salvar a exclusão no arquivo JSON.",
-    });
-  }
+  return res.json({
+    mensagem: "Notícia excluída com sucesso!",
+    noticia: noticiaExcluida,
+  });
 });
 
 app.listen(PORT, () => {
   console.log(`API rodando em http://localhost:${PORT}`);
-  console.log(`${noticias.length} notícias carregadas do arquivo JSON.`);
+  console.log(`${noticias.length} notícias carregadas na memória.`);
 });

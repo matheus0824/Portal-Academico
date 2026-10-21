@@ -757,3 +757,150 @@ footer {
     height: 220px;
   }
 }
+
+
+
+/* Cabeçalho das páginas internas */
+
+.cabecalho-interno {
+  background: #fff;
+  color: #222;
+  padding: 30px 24px 24px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.cabecalho-interno .marca-interna {
+  color: #a71920;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+}
+
+.cabecalho-interno h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 42px);
+  margin: 0 0 10px;
+}
+
+.cabecalho-interno > p:not(.marca-interna) {
+  color: #555;
+  margin: 0;
+}
+
+.navegacao-interna {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.navegacao-interna a {
+  color: #a71920;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+
+.conteudo-noticias {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.total-noticias {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .cabecalho-interno {
+    padding: 24px 16px;
+  }
+
+  .navegacao-interna {
+    gap: 14px;
+  }
+
+  .conteudo-noticias {
+    padding: 20px 16px;
+  }
+}
+
+
+
+.form-edicao-noticia {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #d7dfe8;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.form-edicao-noticia h3 {
+  margin: 0 0 8px;
+}
+
+.form-edicao-noticia label {
+  font-weight: 600;
+}
+
+.form-edicao-noticia input,
+.form-edicao-noticia select,
+.form-edicao-noticia textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.botoes-noticia,
+.botoes-edicao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.botao-editar {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #174a73;
+  color: white;
+  cursor: pointer;
+}
+
+.botao-editar:hover {
+  background: #103653;
+}
+
+.botoes-edicao button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.botoes-edicao button[type="submit"] {
+  background: #176b45;
+  color: white;
+}
+
+.botoes-edicao button[type="button"] {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.botoes-edicao button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

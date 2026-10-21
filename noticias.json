@@ -1,5 +1,4 @@
-  
-  [
+[
   {
     "id": 1,
     "titulo": "Universidade amplia estudos sobre inteligência artificial",
@@ -31,7 +30,6 @@
     "conteudo": "Pesquisadores estudam estratégias e tecnologias que podem contribuir para diagnósticos mais precisos.",
     "data": "2026-09-04",
     "imagem": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80"
-  
   },
   {
     "id": 5,
@@ -233,7 +231,8 @@
     "data": "2026-08-09",
     "imagem": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1200&q=80"
   },
-  {"id": 30,
+  {
+    "id": 30,
     "titulo": "Projeto testa tecnologia para agricultura urbana",
     "categoria": "Inovação",
     "conteudo": "A equipe estuda formas de combinar monitoramento digital e cultivo em pequenos espaços.",
