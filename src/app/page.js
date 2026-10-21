@@ -63,10 +63,10 @@ export default function Home() {
           INFORMAÇÃO, PESQUISA E CONHECIMENTO
         </p>
 
-        <h1>Portal Acadêmico</h1>
+        <h1>Bereia Acadêmia</h1>
 
         <p>
-          As novidades que movimentam o mundo universitário.
+          Investigar, checar e compreender
         </p>
       </header>
 

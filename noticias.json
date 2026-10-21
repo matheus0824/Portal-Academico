@@ -318,5 +318,13 @@
     "conteudo": "A formação apresenta conceitos básicos e exercícios para quem deseja iniciar na área.",
     "data": "2026-07-10",
     "imagem": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": 41,
+    "titulo": "TV 3.0 amplia possibilidades para o jornalismo imersivo",
+    "categoria": "Inovação",
+    "conteudo": "A TV 3.0, também batizada comercialmente de DTV+, é a próxima geração da televisão aberta e gratuita no Brasil. A tecnologia combina o sinal tradicional de antena (broadcast) com os recursos da internet (broadband), transformando os canais de TV em aplicativos interativos. Paralelamente à implantação experimental da TV 3.0 no País — que teve início em junho passado, com as primeiras transmissões —, o Laboratório de Arte, Mídia e Tecnologias Digitais (LabArteMídia), grupo de pesquisa e inovação em artes audiovisuais ligado à Escola de Comunicações e Artes (ECA) da USP, desenvolve pesquisas relacionadas à introdução da nova tecnologia no Brasil.",
+    "data": "2026-10-19",
+    "imagem": "https://jornal.usp.br/wp-content/uploads/2026/10/20261016_realidadevirtual.jpg"
   }
 ]
